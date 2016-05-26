@@ -3,3 +3,6 @@ LibXlsxWriterProj/LibXlsxWriter.sdf
 LibXlsxWriterProj/LibXlsxWriter/x64/
 LibXlsxWriterProj/x64/
 LibXlsxWriterProj/.vs
+.DS_Store
+*.bak
+

@@ -1,30 +1,11 @@
 # MSVCLibXlsxWriter
 
 
-MSVCLibXlsxWriter is a MSVC project to build a Windows DLL for [libxlsxwriter][libxlsxwriter]: A C library for creating Excel XLSX files.
+MSVCLibXlsxWriter is a MSVC project to build a Windows DLL for [libxlsxwriter][libxlsxwriter] a C library for creating Excel XLSX files.
 
 [libxlsxwriter]: https://github.com/jmcnamara/libxlsxwriter
 
 ![demo image](http://libxlsxwriter.github.io/demo.png)
-
-
-## Building a Windows DLL of libxlsxwriter
-
-The MSVCLibXlsxWriter contains the libxlsxwriter as a submodule. Clone the project as follows:
-
-    git clone --recursive https://github.com/jmcnamara/MSVCLibXlsxWriter.git
-
-Or:
-
-    git clone https://github.com/jmcnamara/MSVCLibXlsxWriter.git
-    cd MSVCLibXlsxWriter/
-    git submodule init
-    git submodule update
-
-The MSVC project in in the `MSVCLibXlsxWriter/LibXlsxWriterProj` directory.
-
-
-## The libxlsxwriter library
 
 Libxlsxwriter is a C library that can be used to write text, numbers, formulas and hyperlinks to multiple worksheets in an Excel 2007+ XLSX file.
 
@@ -45,47 +26,45 @@ It supports features such as:
 - Works on Linux, FreeBSD, OS X, iOS and Windows.
 - The only dependency is on `zlib`.
 
-Here is an example that was used to create the spreadsheet shown above:
+See the [full libxlsxwriter documentation](http://libxlsxwriter.github.io) for a getting started guide, a tutorial, the main API documentation and examples. Or see the [source code on GitHub](https://github.com/jmcnamara/libxlsxwriter).
 
 
-```C
-#include "xlsxwriter.h"
+## Building a Windows DLL of libxlsxwriter
 
-int main() {
+The MSVCLibXlsxWriter repository contains 3 directories:
 
-    /* Create a new workbook and add a worksheet. */
-    lxw_workbook  *workbook  = workbook_new("demo.xlsx");
-    lxw_worksheet *worksheet = workbook_add_worksheet(workbook, NULL);
+- **LibXlsxWriterProj**: A MSVC project to build a `LibXlsxWriter.dll` from the libxlsxwriter source code. The directory also contains a pre-built `Zlib.dll` file.
+- **libxlsxwriter**: The libxlsxwriter source code in a git submodule.
+- **ExampleExe**: A libxlsxwriter sample application built as a console application that requires the `LibXlsxWriter.dll` and `Zlib.dll` files.
 
-    /* Add a format. */
-    lxw_format *format = workbook_add_format(workbook);
+The libxlsxwriter directory is a Git submodule. It isn't included when you do a Git clone of MSVCLibXlsxWriter. In order to get the submodule you can clone the project recursively as follows:
 
-    /* Set the bold property for the format */
-    format_set_bold(format);
+    git clone --recursive https://github.com/jmcnamara/MSVCLibXlsxWriter.git
 
-    /* Change the column width for clarity. */
-    worksheet_set_column(worksheet, 0, 0, 20, NULL);
+Or:
 
-    /* Write some simple text. */
-    worksheet_write_string(worksheet, 0, 0, "Hello", NULL);
+    git clone https://github.com/jmcnamara/MSVCLibXlsxWriter.git
+    cd MSVCLibXlsxWriter/
+    git submodule init
+    git submodule update
 
-    /* Text with formatting. */
-    worksheet_write_string(worksheet, 1, 0, "World", format);
+Open the `LibXlsxWriterProj/LibXlsxWriter.sln` project in MS Visual Studio and build the DLL using the "Build -> Build Solution" menu item.
 
-    /* Writer some numbers. */
-    worksheet_write_number(worksheet, 2, 0, 123,     NULL);
-    worksheet_write_number(worksheet, 3, 0, 123.456, NULL);
+In the default configuration this will build an x64 debug LibXlsxWriter `.lib` and `.dll` in:
 
-    /* Insert an image. */
-    worksheet_insert_image(worksheet, 1, 2, "logo.png");
-
-    workbook_close(workbook);
-
-    return 0;
-}
-
-```
+    MSVCLibXlsxWriter\LibXlsxWriterProj\x64\Debug
 
 
+## Building a console application using the LibXlsxWriter.lib
 
-See the [full documentation](http://libxlsxwriter.github.io) for the getting started guide, a tutorial, the main API documentation and examples.
+Ensure that `LibXlsxWriter.lib` was built correctly in the previous steps.
+
+Open the `ExampleExe/ExampleExe.sln` project in MS Visual Studio and build the DLL using the "Build -> Build Solution" menu item.
+
+In the default configuration this will build an x64 exe file as follows:
+
+    MSVCLibXlsxWriter\ExampleExe\x64\Debug\ExampleExe.exe
+
+To run the application copy the `LibXlsxWriter.dll` and `Zlib.dll` file from the `MSVCLibXlsxWriter\LibXlsxWriterProj` sub-directories to the same directory as the executable. You can then run the application by double clicking on it in File Explorer or by opening a CMD console and running it from the directory.
+
+Once the program has run it will create a `chart_column.xlsx` file based on the default sample application in ExampleExe.cpp. You can run other libxlsxwriter example programs by copying the code from one of the `libxlsxwriter\example\*.c` programs.

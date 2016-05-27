@@ -168,6 +168,7 @@
     <ClInclude Include="..\..\libxlsxwriter\third_party\minizip\mztools.h" />
     <ClInclude Include="..\..\libxlsxwriter\third_party\minizip\unzip.h" />
     <ClInclude Include="..\..\libxlsxwriter\third_party\minizip\zip.h" />
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\libxlsxwriter\src\app.c" />
@@ -208,6 +209,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="XlsxWriter.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="LibXlsxWriter.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

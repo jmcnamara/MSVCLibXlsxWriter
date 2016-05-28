@@ -1,6 +1,6 @@
 *.h         eol=crlf
 *.cpp       eol=crlf
-*.rc        eol=crlf
+*.rc        binary
 *.vcproj    eol=crlf
 *.bat       eol=crlf
 *.sln       eol=crlf

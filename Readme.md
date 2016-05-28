@@ -63,6 +63,10 @@ Or update it explicitly as follows:
     git submodule init
     git submodule update
 
+This version of MSVCLibXlsxWriter contains libxlsxwriter version 0.3.4.
+
+
+
 To build the DLL of the library open the `LibXlsxWriterProj/LibXlsxWriter.sln`
 project in MS Visual Studio and build the solution using the "Build -> Build
 Solution" menu item.

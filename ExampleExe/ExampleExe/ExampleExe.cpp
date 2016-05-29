@@ -1,6 +1,6 @@
 // The example below is take from the libxlsxwriter/examples directory. The
 // code can be replaced with code from any of the other example programs in
-// the directory. The lib linkage is done via the stdafx.h file.
+// thatdirectory. The lib linkage is done via the stdafx.h file.
 
 /*
  * An example of creating Excel column charts using the libxlsxwriter library.

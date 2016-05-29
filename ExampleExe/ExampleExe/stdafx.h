@@ -17,7 +17,7 @@
 #else
 #pragma comment(lib, "..\\..\\LibXlsxWriterProj\\Zlib\\zlib.lib")
 #ifdef _DEBUG
-#pragma comment(lib, "..\\LibXlsxWriterProj\\Debug\\LibXlsxWriter.lib")
+#pragma comment(lib, "..\\..\\LibXlsxWriterProj\\Debug\\LibXlsxWriter.lib")
 #else
 #pragma comment(lib, "..\\..\\LibXlsxWriterProj\\Release\\LibXlsxWriter.lib")
 #endif

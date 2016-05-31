@@ -63,7 +63,7 @@ Or update it explicitly as follows:
     git submodule init
     git submodule update
 
-This version of MSVCLibXlsxWriter contains libxlsxwriter version 0.3.4.
+This version of MSVCLibXlsxWriter contains libxlsxwriter version 0.3.6.
 
 
 

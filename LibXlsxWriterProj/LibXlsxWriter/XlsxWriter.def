@@ -81,11 +81,15 @@ EXPORTS
     lxw_create_package
     lxw_ct_add_calc_chain
     lxw_ct_add_chart_name
+    lxw_ct_add_custom_properties
     lxw_ct_add_default
     lxw_ct_add_drawing_name
     lxw_ct_add_override
     lxw_ct_add_shared_strings
     lxw_ct_add_worksheet_name
+    lxw_custom_assemble_xml_file
+    lxw_custom_free
+    lxw_custom_new
     lxw_datetime_to_excel_date
     lxw_drawing_assemble_xml_file
     lxw_drawing_free
@@ -163,6 +167,11 @@ EXPORTS
     workbook_get_worksheet_by_name
     workbook_new
     workbook_new_opt
+    workbook_set_custom_property_boolean
+    workbook_set_custom_property_datetime
+    workbook_set_custom_property_integer
+    workbook_set_custom_property_number
+    workbook_set_custom_property_string
     workbook_set_properties
     worksheet_activate
     worksheet_autofilter

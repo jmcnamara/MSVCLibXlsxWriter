@@ -175,6 +175,7 @@
     <ClCompile Include="..\..\libxlsxwriter\src\chart.c" />
     <ClCompile Include="..\..\libxlsxwriter\src\content_types.c" />
     <ClCompile Include="..\..\libxlsxwriter\src\core.c" />
+    <ClCompile Include="..\..\libxlsxwriter\src\custom.c" />
     <ClCompile Include="..\..\libxlsxwriter\src\drawing.c" />
     <ClCompile Include="..\..\libxlsxwriter\src\format.c" />
     <ClCompile Include="..\..\libxlsxwriter\src\hash_table.c" />

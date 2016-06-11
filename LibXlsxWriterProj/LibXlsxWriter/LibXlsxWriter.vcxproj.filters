@@ -52,6 +52,9 @@
     <ClCompile Include="..\..\libxlsxwriter\src\core.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\libxlsxwriter\src\custom.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\libxlsxwriter\src\drawing.c">
       <Filter>Source Files</Filter>
     </ClCompile>

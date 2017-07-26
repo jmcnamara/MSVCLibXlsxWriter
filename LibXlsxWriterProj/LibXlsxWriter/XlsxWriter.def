@@ -1,16 +1,95 @@
 EXPORTS
     chart_add_series
+    chart_axis_major_gridlines_set_line
+    chart_axis_major_gridlines_set_visible
+    chart_axis_minor_gridlines_set_line
+    chart_axis_minor_gridlines_set_visible
+    chart_axis_off
+    chart_axis_set_crossing
+    chart_axis_set_crossing_max
+    chart_axis_set_display_units
+    chart_axis_set_display_units_visible
+    chart_axis_set_fill
+    chart_axis_set_interval_tick
+    chart_axis_set_interval_unit
+    chart_axis_set_label_position
+    chart_axis_set_line
+    chart_axis_set_log_base
+    chart_axis_set_major_tick_mark
+    chart_axis_set_major_unit
+    chart_axis_set_max
+    chart_axis_set_min
+    chart_axis_set_minor_tick_mark
+    chart_axis_set_minor_unit
     chart_axis_set_name
+    chart_axis_set_name_font
     chart_axis_set_name_range
+    chart_axis_set_num_font
+    chart_axis_set_num_format
+    chart_axis_set_pattern
+    chart_axis_set_position
+    chart_axis_set_reverse
+    chart_chartarea_set_fill
+    chart_chartarea_set_line
+    chart_chartarea_set_pattern
+    chart_legend_delete_series
+    chart_legend_set_font
+    chart_legend_set_position
+    chart_plotarea_set_fill
+    chart_plotarea_set_line
+    chart_plotarea_set_pattern
     chart_series_set_categories
+    chart_series_set_error_bars
+    chart_series_set_error_bars_direction
+    chart_series_set_error_bars_endcap
+    chart_series_set_error_bars_line
+    chart_series_set_fill
+    chart_series_set_invert_if_negative
+    chart_series_set_labels
+    chart_series_set_labels_font
+    chart_series_set_labels_leader_line
+    chart_series_set_labels_legend
+    chart_series_set_labels_num_format
+    chart_series_set_labels_options
+    chart_series_set_labels_percentage
+    chart_series_set_labels_position
+    chart_series_set_labels_separator
+    chart_series_set_line
+    chart_series_set_marker_fill
+    chart_series_set_marker_line
+    chart_series_set_marker_pattern
+    chart_series_set_marker_size
+    chart_series_set_marker_type
     chart_series_set_name
     chart_series_set_name_range
+    chart_series_set_pattern
+    chart_series_set_points
+    chart_series_set_smooth
+    chart_series_set_trendline
+    chart_series_set_trendline_equation
+    chart_series_set_trendline_forecast
+    chart_series_set_trendline_intercept
+    chart_series_set_trendline_line
+    chart_series_set_trendline_name
+    chart_series_set_trendline_r_squared
     chart_series_set_values
+    chart_set_drop_lines
+    chart_set_high_low_lines
     chart_set_hole_size
     chart_set_rotation
+    chart_set_series_gap
+    chart_set_series_overlap
     chart_set_style
+    chart_set_table
+    chart_set_table_font
+    chart_set_table_grid
+    chart_set_up_down_bars
+    chart_set_up_down_bars_format
+    chart_show_blanks_as
+    chart_show_hidden_data
     chart_title_off
     chart_title_set_name
+    chart_title_set_name_font
     chart_title_set_name_range
     format_set_align
     format_set_bg_color
@@ -96,6 +175,7 @@ EXPORTS
     lxw_drawing_new
     lxw_escape_control_characters
     lxw_escape_data
+    lxw_format_check_color
     lxw_format_free
     lxw_format_get_border_key
     lxw_format_get_fill_key
@@ -139,6 +219,7 @@ EXPORTS
     lxw_theme_free
     lxw_theme_new
     lxw_tmpfile
+    lxw_utf8_strlen
     lxw_workbook_assemble_xml_file
     lxw_workbook_free
     lxw_workbook_set_default_xf_indices
@@ -173,6 +254,7 @@ EXPORTS
     workbook_set_custom_property_number
     workbook_set_custom_property_string
     workbook_set_properties
+    workbook_validate_worksheet_name
     worksheet_activate
     worksheet_autofilter
     worksheet_center_horizontally

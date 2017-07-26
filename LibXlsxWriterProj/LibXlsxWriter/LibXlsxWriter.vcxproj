@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -168,6 +168,7 @@
     <ClInclude Include="..\..\libxlsxwriter\third_party\minizip\mztools.h" />
     <ClInclude Include="..\..\libxlsxwriter\third_party\minizip\unzip.h" />
     <ClInclude Include="..\..\libxlsxwriter\third_party\minizip\zip.h" />
+    <ClInclude Include="..\..\libxlsxwriter\third_party\tmpfileplus\tmpfileplus.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
@@ -192,6 +193,7 @@
     <ClCompile Include="..\..\libxlsxwriter\third_party\minizip\iowin32.c" />
     <ClCompile Include="..\..\libxlsxwriter\third_party\minizip\unzip.c" />
     <ClCompile Include="..\..\libxlsxwriter\third_party\minizip\zip.c" />
+    <ClCompile Include="..\..\libxlsxwriter\third_party\tmpfileplus\tmpfileplus.c" />
     <ClCompile Include="dllmain.cpp">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

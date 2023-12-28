@@ -1,3 +1,6 @@
+**Note**: this method is deprecated in favour of using VCPKG. See the libxlswriter docs: https://libxlsxwriter.github.io/getting_started.html#gsg_vcpkg 
+
+
 # MSVCLibXlsxWriter
 
 
